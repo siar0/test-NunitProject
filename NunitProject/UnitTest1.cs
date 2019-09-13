@@ -1,18 +1,36 @@
+﻿using System;
 using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 
-namespace Tests
+namespace NunitProject
 {
-    public class Tests
+    public class UnitTest1
     {
-        [SetUp]
-        public void Setup()
+        [TestFixture]
+        public class MyFirstTest
         {
-        }
+            private WebDriverWait wait;
+            private IWebDriver driver;
 
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
+            [SetUp]
+            public void Start()
+            {
+                driver = new ChromeDriver();
+            }
+
+            [Test]
+            public void FirstTest()
+            {
+                driver.Url = "http://www.google.com/";
+            }
+
+            [TearDown]
+            public void Stop()
+            {
+                driver.Quit();
+            }
         }
     }
 }
