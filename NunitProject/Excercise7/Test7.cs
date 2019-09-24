@@ -1,12 +1,10 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
 
-namespace NunitProject.Excercise07
+namespace NunitProject.Excercise8
 {
-    public class Test
+    public class Test7
     {
         private ChromeDriver driver;
 
